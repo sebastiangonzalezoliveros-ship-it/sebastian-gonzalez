@@ -1,99 +1,156 @@
 * {
     margin: 0;
     padding: 0;
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #222;
 }
 
-header{
-    background-color: #8181ec;
-    color: white;
-    padding: 20px 40px;
+.navbar {
+    height: 65px;
+    background-color: #9b8df5;
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
+    padding: 0 9%;
 }
 
-header h1{
-    font-size: 24px;
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-header input{
-    flex: 1;
-    padding: 12px 20px;
+.buscador {
+    width: 45%;
+    padding: 9px 14px;
     border: none;
     border-radius: 20px;
     outline: none;
 }
 
-button{
-    flex: 1;
-    padding: 10px 18px;
+.login-btn {
+    background-color: #7665df;
+    color: white;
+    border: none;
     border-radius: 20px;
+    padding: 9px 16px;
     cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-header button{
-    background-color: #4a4ad0;
-    color: white;
+.login-btn:hover {
+    background-color: #604ed0;
 }
 
-main{
+.contenedor {
+    width: 78%;
+    max-width: 1100px;
+    margin: 24px auto;
     display: flex;
-    gap: 30px;
-    padding: 40px;
+    gap: 20px;
 }
 
-section{
-    width: 50%;
+.publicaciones {
+    width: 70%;
 }
 
-article{
+.post {
     background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px ;
-    color: #ccc;
+    padding: 20px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
 }
 
-article  h2{
-    margin-bottom: 12px;
-    color: #222;
+.post h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
-article p{
-    margin: 8px 0;
-    color: #555;
+.post p {
+    margin-bottom: 6px;
+    font-size: 13px;
+    line-height: 1.35;
 }
 
-article button{
-    background-color: #e94b5f;
-    color: white;
+.like-btn {
     margin-top: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-aside{
+.like-btn:hover {
+    background-color: #ff4d4d;
+}
+
+.sidebar {
     width: 30%;
-    height: fit-content;
+}
+
+.user-card {
     background-color: white;
-    padding: 30px;
+    padding: 24px 20px;
+    border-radius: 8px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px;
-    color: #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
 }
 
-aside p{
-    color: #555;
-    margin-bottom: 20px;
+.user-card h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
-aside button{
-    background-color: #20b9aa;
-    color: rgb(252, 244, 244);
+.user-card p {
+    margin-bottom: 18px;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.profile-btn {
+    background-color: #20c9c3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.profile-btn:hover {
+    background-color: #13aaa5;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 12px 20px;
+        gap: 10px;
+    }
+
+    .buscador {
+        width: 40%;
+    }
+
+    .contenedor {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .publicaciones,
+    .sidebar {
+        width: 100%;
+    }
 }

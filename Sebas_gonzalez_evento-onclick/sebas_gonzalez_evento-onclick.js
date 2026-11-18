@@ -1,39 +1,46 @@
-// Botones de "me gusta"
-const botoneslike = document.querySelectorAll("aarticle button");
-botoneslike.forEach(boto=> {
+const loginBtn = document.getElementById("loginBtn");
 
-boton.addEventListener("click", 
-    () => {
-        let numero =
-        parseInt(boton.textoContent);
-
-    if(boton.textContent) ;
-    if(boton.textContent.includes("me gusta")) {
-
-        numero++;
-        boton.textContent =
-    numero + "me gusta";
+loginBtn.addEventListener("click", function() {
+    if (loginBtn.innerText == "Iniciar sesión") {
+        loginBtn.innerText = "Cerrar sesión";
+    } else {
+        loginBtn.innerText = "Iniciar sesión";
     }
-    })
-    });
-    
-// Buscador
-const buscador = document.querySelector("header input");
-const publicaciones = document.querySelectorAll("article");
-
-buscador.addEventListener("input", () => {
-    const texto = buscador.ariaValueMax.toLocaleLowerCase();
-publicaciones.forEach(publicacion => {
-    const contenido = publicacion.textContent.toLowerCase();
-    if (contenido.includes(texto)) {
-        publicacion.style.display = "none";
-    }
-    })
 });
 
-// boton "ver mas"
-    const botonVermas = document.querySelector("aside button");
-    botonVermas.addEventListener("click", () => {
-  alert("aqui podras explorar mas publicaciones.");
-    });
+const profileBtn = document.getElementById("profileBtn");
 
+profileBtn.addEventListener("click", function() {
+    alert("Cargando perfil...");
+});
+
+const likeBtn1 = document.getElementById("likeBtn1");
+
+likeBtn1.addEventListener("click", function() {
+    const contador = likeBtn1.querySelector(".like-count");
+    contador.innerText++;
+});
+
+const likeBtn2 = document.getElementById("likeBtn2");
+
+likeBtn2.addEventListener("click", function() {
+    const contador = likeBtn2.querySelector(".like-count");
+    contador.innerText++;
+});
+
+const searchInput = document.getElementById("searchInput");
+const publicaciones = document.querySelectorAll(".post");
+
+searchInput.addEventListener("input", function() {
+    const texto = searchInput.value.toLowerCase();
+
+    publicaciones.forEach(function(publicacion) {
+        const titulo = publicacion.querySelector("h2").innerText.toLowerCase();
+
+        if (titulo.includes(texto)) {
+            publicacion.style.display = "block";
+        } else {
+            publicacion.style.display = "none";
+        }
+    });
+});
